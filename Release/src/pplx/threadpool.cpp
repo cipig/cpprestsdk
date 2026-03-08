@@ -195,7 +195,7 @@ std::pair<bool, platform_shared_threadpool*> initialize_shared_threadpool(size_t
 
 namespace crossplat
 {
-threadpool& threadpool::shared_instance() { return initialize_shared_threadpool(80).second->get_shared(); }
+threadpool& threadpool::shared_instance() { return initialize_shared_threadpool(20).second->get_shared(); }
 
 void threadpool::initialize_with_threads(size_t num_threads)
 {
